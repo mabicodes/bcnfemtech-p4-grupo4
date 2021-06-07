@@ -1,4 +1,4 @@
-(Project in progress)
+###(Project in progress)
 #PROJECT#4 @FemTechBCN
 ## Description :
 > This project consists of making a Gaming store page for our client using Springboot and SCRUM.
