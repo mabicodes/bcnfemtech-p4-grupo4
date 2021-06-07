@@ -11,6 +11,7 @@ body {
 .logo {
     margin: 10px;
     margin-left: 30px;
+    cursor: pointer;
 }
 #logoimg {
     height: 55px;
