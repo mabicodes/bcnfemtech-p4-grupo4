@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FA4325;
+}
+.logo {
+    margin: 10px;
+    margin-left: 30px;
+}
+#logoimg {
+    height: 55px;
+    width: 50px;
+}
+#logotext {
+    height: 40px;
+    width: 150px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.searchbar {
+    display: flex;
+    margin: 20px;
+}
+.searchbar input{
+    height: 25px;
+    width: 250px;
+}
+.searchbar img{
+    height: 18px;
+    width: 20px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 4px;
+}
