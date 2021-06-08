@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -49,6 +50,7 @@ body {
 .searchbar img:hover{
     transform: scale(1.6);
 }
+
 .grid-post {
 margin-top: 100px;
 margin-bottom: 100px;
@@ -65,10 +67,10 @@ margin-bottom: 100px;
     max-height: 350px;
     border-radius: 0;
 }
-
-
 .container {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
 }
+
+
