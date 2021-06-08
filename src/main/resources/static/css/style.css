@@ -49,3 +49,26 @@ body {
 .searchbar img:hover{
     transform: scale(1.6);
 }
+.grid-post {
+margin-top: 100px;
+margin-bottom: 100px;
+}
+.grid-post .card-deck-wrapper {
+    border: 0;
+    margin-bottom: 100px;
+}
+.grid-post .card-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+.grid-post .card-img-top {
+    max-height: 350px;
+    border-radius: 0;
+}
+
+
+.container {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+}
