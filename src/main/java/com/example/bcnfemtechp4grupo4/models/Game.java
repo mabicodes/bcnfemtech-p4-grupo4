@@ -72,4 +72,68 @@ public class Game implements Serializable {
     public void setYear(String year) {
         this.year= year;
     }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getEtiqueta() {
+        return etiqueta;
+    }
+
+    public void setEtiqueta(String etiqueta) {
+        this.etiqueta = etiqueta;
+    }
+
+    public String getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(String discount) {
+        this.discount = discount;
+    }
+
+    public String getPricediscount() {
+        return pricediscount;
+    }
+
+    public void setPricediscount(String pricediscount) {
+        this.pricediscount = pricediscount;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+    public void setPublisher (String category) {
+        this.category = category;
+    }
+
+    public String getPegi() {
+        return pegi;
+    }
+
+    public void setPegi(String pegi) {
+        this.pegi = pegi;
+    }
+
+    public String getPegicontentdescriptors() {
+        return pegicontentdescriptors;
+    }
+
+    public void setPegicontentdescriptors(String pegicontentdescriptors) {
+        this.pegicontentdescriptors = pegicontentdescriptors;
+    }
 }
+
