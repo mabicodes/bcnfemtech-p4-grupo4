@@ -4,13 +4,11 @@ import javax.persistence.*;
 import javax.sound.midi.Sequence;
 import java.io.Serializable;
 
-public class Game {
-}
 @Entity
 @Table(name = "games")
 public class Game implements Serializable {
     @Id
-    @GeneratedValue(strategy = SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String title;
     private String platform;
