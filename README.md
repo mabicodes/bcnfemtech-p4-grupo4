@@ -20,6 +20,8 @@ alt="Markdown Instagram icon" height="40" width="40"/></a>
 1. IntelliJ IDEA
 2. Trello (User stories)
 3. FIGMA (Prototype)
+4. DOCKER (Database)
+
 ## Members: 
 - Alisa Filonenko
 - Gaby Campoverde
