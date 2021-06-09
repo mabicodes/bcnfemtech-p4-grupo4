@@ -33,6 +33,9 @@ import java.awt.*;
         model.addAttribute("game",game);
         return "games/edit";
     }
+    @PostMapping("/games")
+    public void addGames(Game game) {
+    }
     @PostMapping("/games/new")
         public String addGame(@ModelAttribute Game game) {
         gameService.save(game);
