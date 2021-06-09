@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.awt.*;
+import java.util.List;
+
 
 @Controller
    public class GameController {
@@ -23,7 +24,7 @@ import java.awt.*;
        String listGames(Model model) {
         List<Game> games = gameService.allGames();
         model.addAttribute("title" , "Games List");
-        model.addAttribute("game",games);
+        model.addAttribute("games",games);
         return "games/all";
     }
     @GetMapping("/games/new")
