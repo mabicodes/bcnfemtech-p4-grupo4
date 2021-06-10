@@ -11,16 +11,8 @@ public class Game implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String title;
-    private String platform;
     private String year;
-    private String price;
-    private String etiqueta;
-    private String discount;
-    private String pricediscount;
     private String category;
-    private String publisher;
-    private String pegi;
-    private String pegicontentdescriptors;
 
 
     public Long getId() {
@@ -44,66 +36,20 @@ public class Game implements Serializable {
         return "Game{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", platform='" + platform + '\'' +
                 ", year='" + year + '\'' +
-                ", price='" + price + '\'' +
-                ", etiqueta='" + etiqueta + '\'' +
-                ", discount='" + discount + '\'' +
-                ", pricediscount='" + pricediscount+ '\'' +
                 ", category='" + category + '\'' +
-                ", publisher='" + publisher + '\'' +
-                ", pegi='" + pegi+ '\'' +
-                ", pegicontentdescriptors='" + pegicontentdescriptors+ '\'' +
                 '}';
     }
 
-    public String getPlatform() {
-        return platform;
-    }
-
-    public void setPlatform(String platform) {
-        this.platform = platform;
-    }
 
     public String getYear() {
         return year;
     }
 
     public void setYear(String year) {
-        this.year= year;
+        this.year = year;
     }
 
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
-    public String getEtiqueta() {
-        return etiqueta;
-    }
-
-    public void setEtiqueta(String etiqueta) {
-        this.etiqueta = etiqueta;
-    }
-
-    public String getDiscount() {
-        return discount;
-    }
-
-    public void setDiscount(String discount) {
-        this.discount = discount;
-    }
-
-    public String getPricediscount() {
-        return pricediscount;
-    }
-
-    public void setPricediscount(String pricediscount) {
-        this.pricediscount = pricediscount;
-    }
 
     public String getCategory() {
         return category;
@@ -113,27 +59,4 @@ public class Game implements Serializable {
         this.category = category;
     }
 
-    public String getPublisher() {
-        return publisher;
-    }
-    public void setPublisher (String category) {
-        this.category = category;
-    }
-
-    public String getPegi() {
-        return pegi;
-    }
-
-    public void setPegi(String pegi) {
-        this.pegi = pegi;
-    }
-
-    public String getPegicontentdescriptors() {
-        return pegicontentdescriptors;
-    }
-
-    public void setPegicontentdescriptors(String pegicontentdescriptors) {
-        this.pegicontentdescriptors = pegicontentdescriptors;
-    }
 }
-
