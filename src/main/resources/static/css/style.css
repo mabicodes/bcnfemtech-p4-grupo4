@@ -84,5 +84,36 @@ margin-bottom: 100px;
     column-count: 2;
     background-color: whitesmoke;
 }
+.container-btn {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 25px;
 
+
+}
+.btn-group button {
+    background-color: rgba(227, 59, 17, 0.82);
+    border-radius: 20px;
+    border: 1px solid #e33b11;
+    color: white;
+    padding: 10px 84px;
+    cursor: pointer;
+    margin-left:75px;
+    margin-top:30px;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.btn-group button:hover {
+    background-color: #e33b11;
+}
 
