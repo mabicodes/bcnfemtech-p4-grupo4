@@ -58,19 +58,17 @@ main {
 .d-blockw-100,.carousel-item {
     height: 350px;
     width: 70%;
-    /*position: center;
-    margin:auto;*/
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    left: 0;
-    right: 0;
+    left: 0px;
+    right: 0px;
 }
 
 /*GRID*/
 .grid-post {
-margin-top: 100px;
-margin-bottom: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 .grid-post .card-deck-wrapper {
     border: 0;
@@ -89,6 +87,38 @@ margin-bottom: 100px;
     -moz-column-count: 2;
     column-count: 2;
     background-color: whitesmoke;
+}
+.container-btn {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 25px;
+
+
+}
+.btn-group button {
+    background-color: rgba(227, 59, 17, 0.82);
+    border-radius: 20px;
+    border: 1px solid #e33b11;
+    color: white;
+    padding: 10px 84px;
+    cursor: pointer;
+    margin-left:75px;
+    margin-top:30px;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.btn-group button:hover {
+    background-color: #e33b11;
 }
 
 

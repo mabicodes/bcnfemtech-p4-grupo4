@@ -58,7 +58,11 @@ main {
 .d-blockw-100,.carousel-item {
     height: 350px;
     width: 70%;
-    position: center;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0px;
+    right: 0px;
 }
 
 /*GRID*/
