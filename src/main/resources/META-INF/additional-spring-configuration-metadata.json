@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "server.port",
+      "type": "java.lang.String",
+      "description": "Description for server.port."
+    },
+    {
+      "name": "spring.jpa.hibernate.ddl-auto",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.hibernate.ddl-auto."
+    },
+    {
+      "name": "spring.jpa.show-sql",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.show-sql."
+    }
+
+  ] }
