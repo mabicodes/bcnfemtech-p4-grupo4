@@ -7,3 +7,4 @@ CREATE TABLE games (
                        year VARCHAR (255) NOT NULL
 
 );
+
