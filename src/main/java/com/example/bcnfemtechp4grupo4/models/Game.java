@@ -11,7 +11,7 @@ public class Game implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String title;
-    private String year;
+    private Long year;
     private String category;
 
 
@@ -31,6 +31,14 @@ public class Game implements Serializable {
         this.title = title;
     }
 
+    public Long getYear() { return year;}
+
+    public void setYear(Long year) { this.year = year; }
+
+    public String getCategory() { return category;}
+
+    public void setCategory(String category) { this.category=category;}
+
     @Override
     public String toString() {
         return "Game{" +
@@ -40,23 +48,4 @@ public class Game implements Serializable {
                 ", category='" + category + '\'' +
                 '}';
     }
-
-
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
-    }
-
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
 }
