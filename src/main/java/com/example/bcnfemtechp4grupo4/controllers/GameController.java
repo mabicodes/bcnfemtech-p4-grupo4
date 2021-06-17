@@ -49,6 +49,12 @@ import java.util.List;
         model.addAttribute("title","Edit game");
         return "games/edit";
     }
+    @PostMapping("/games/edit/{id}")
+    public String editGame(Model model,@PathVariable Long id){
+        gameService.save(game);
+        return "redirect:/games";
+    }
+
     @GetMapping("/games/delete/{id}")
         public String deleteGame(@PathVariable Long id) {
         gameService.delete(id);
