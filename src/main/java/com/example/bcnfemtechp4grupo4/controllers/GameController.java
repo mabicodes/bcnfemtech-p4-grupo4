@@ -16,31 +16,23 @@ import java.util.List;
 @Controller
    public class GameController {
     private final GameService gameService;
+    private Long id;
 
     @Autowired
     public GameController(GameService gameService) { this.gameService=gameService;}
 
-    @GetMapping("/games")
-       String listGames(Model model) {
-        List<Game> games = gameService.allGames();
-        model.addAttribute("title" , "Games List");
-        model.addAttribute("games",games);
-        return "games/all";
-    }
     @GetMapping("/games/new")
-        String getForm(Model model){
-        Game game = new Game();
-        model.addAttribute("title","Create new game");
+       public String newGame(Model model) {
+        Game game = new Game()
+        model.addAttribute("title" , "Create a new game");
         model.addAttribute("game",game);
         return "games/edit";
     }
-    @PostMapping("/games")
-    public void addGames(Game game) {
-    }
+
     @PostMapping("/games/new")
         public String addGame(@ModelAttribute Game game) {
         gameService.save(game);
-        return "redirect:/games";
+        return "redirect:/home";
     }
     @GetMapping("/games/edit/{id}")
         public String editGame(Model model, @PathVariable Long id) {
@@ -50,16 +42,16 @@ import java.util.List;
         return "games/edit";
     }
     @PostMapping("/games/edit/{id}")
-    public String editGame(Model model,@PathVariable Long id){
-        gameService.save(game);
-        return "redirect:/games";
+        public String editGame(Model model, @PathVariable Long id){
+        this.id = id;
+        gameService.save(id);
+        return "redirect:/home";
     }
-
-    @GetMapping("/games/delete/{id}")
-        public String deleteGame(@PathVariable Long id) {
+    /*/@GetMapping("/games/delete/{id}")
+        public String deleteGame(Model model,@PathVariable Long id) {
         gameService.delete(id);
         return "redirect:/games";
-    }
+    }/*/
 
 
 }

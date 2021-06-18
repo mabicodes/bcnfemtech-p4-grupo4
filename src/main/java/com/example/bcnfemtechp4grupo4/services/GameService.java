@@ -30,4 +30,6 @@ public class GameService {
 
     }
 
+    public void save(Long id) {
+    }
 }
