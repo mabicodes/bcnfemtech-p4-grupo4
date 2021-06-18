@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.List;
 
 
+
 @Controller
    public class GameController {
     private final GameService gameService;
@@ -26,7 +27,7 @@ import java.util.List;
         Game game = new Game();
         model.addAttribute("title" , "Create a new game");
         model.addAttribute("game",game);
-        return "games/edit";
+        return "games/new";
     }
 
     @PostMapping("/games/new")
