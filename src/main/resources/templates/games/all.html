@@ -1,41 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-<head th:replace="fragments/head"></head>
-
-<body>
-<header th:replace="fragments/header"></header>
-    <section class="container">
-        <h1 th:text="${title}"></h1>
-        <table class="table table-bordered">
-            <thead class="table table-bordered">
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Category</th>
-                    <th scope="col">Year</th>
-                    <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-            <tr th:each="game: ${games}">
-                <th scope="row" th:text="${game.id}"></th>
-                <td th:text="${game.title}"></td>
-                <td th:text="${game.category}"></td>
-                <td th:text="${game.year}"></td>
-                <td>
-                    <a class="btn btn-success btn-sm" th:href="'/games'+${game.id}">Edit</a>
-                </td>
-                <td>
-                    <a class="btn btn-danger btn-sm" th:href="'/games'+${game.id}">Delete</a>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </section>
-    <footer th:replace="fragments/footer"></footer>
-</body>
+    <head th:replace="fragments/head"></head>
+        <body>
+            <header th:replace="fragments/header"></header>
+                <section class="container">
+                    <div class="card" th:each="game: ${games}" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="${game.title}"></h5>
+                            <p class="card-text" th:text="${game.category}"> </p>
+                            <p class="card-text" th:text="${game.year}"> </p>
+                            <a class="btn btn-success btn-sm" th:href="'/games/edit/'+${game.id}">Edit</a>
+                            <a class="btn btn-danger btn-sm" th:href="'/games'+${game.id}">Delete</a>
+                        </div>
+                   </div>
+                </section>
+            <footer th:replace="fragments/footer"></footer>
+        </body>
 </html>
-
-
