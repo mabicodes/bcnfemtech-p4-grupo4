@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <head th:replace="fragments/head"></head>
-
 <body>
-<header th:replace="fragments/header"></header>
-
-<footer th:replace="fragments/footer"></footer>
-<section class="container">
-    <h1 th:text="${title}"></h1>
-    <p th:text="${games}"></p>
-</section>
-
+    <header th:replace="fragments/header"></header>
+        <section class="container">
+            <h2>Welcome to our LegacyGames Store</h2>
+            <br>
+            <p>Go to the <a href="/games/">Games</a> section or <a href="/games/new">add a game! </a></p>
+        </section>
+        <footer th:replace="fragments/footer"></footer>
     </body>
-
 </html>
-
-
-
