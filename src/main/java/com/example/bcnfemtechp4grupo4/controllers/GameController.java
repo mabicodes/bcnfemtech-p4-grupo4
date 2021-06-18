@@ -23,7 +23,7 @@ import java.util.List;
 
     @GetMapping("/games/new")
        public String newGame(Model model) {
-        Game game = new Game()
+        Game game = new Game();
         model.addAttribute("title" , "Create a new game");
         model.addAttribute("game",game);
         return "games/edit";
@@ -42,7 +42,7 @@ import java.util.List;
         return "games/edit";
     }
     @PostMapping("/games/edit/{id}")
-        public String editGame(Model model, @PathVariable Long id){
+        public String addGame(Model model, @PathVariable Long id){
         this.id = id;
         gameService.save(id);
         return "redirect:/home";
