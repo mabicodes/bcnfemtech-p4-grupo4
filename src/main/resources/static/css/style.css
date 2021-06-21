@@ -82,13 +82,13 @@ margin-bottom: 100px;
     max-height: 350px;
     border-radius: 0;
 }
-.container {
+/*.container {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-    background-color: whitesmoke;
+    background-color: whitesmoke;*/
 }
-.container-btn {
+/*.container-btn {
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -96,7 +96,7 @@ margin-bottom: 100px;
     margin-bottom: 25px;
 
 
-}
+}*/
 .btn-group button {
     background-color: rgba(227, 59, 17, 0.82);
     border-radius: 20px;
@@ -121,3 +121,18 @@ margin-bottom: 100px;
     background-color: #e33b11;
 }
 
+.card-body{
+    display:flex;
+    flex-wrap: wrap;
+    padding:20px;
+}
+
+.card{
+    border: 1px solid black;
+    width: 250px;
+    border-radius:20px;
+    padding: 10px;
+    margin:10px;
+    align-items: center;
+
+}
