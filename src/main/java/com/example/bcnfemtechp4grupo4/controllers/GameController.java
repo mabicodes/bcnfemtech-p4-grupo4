@@ -17,7 +17,6 @@ import java.util.List;
 @Controller
    public class GameController {
     private final GameService gameService;
-    private Long id;
 
     @Autowired
     public GameController(GameService gameService) { this.gameService=gameService;}
@@ -36,8 +35,8 @@ import java.util.List;
     @GetMapping("/games/new")
        public String newGame(Model model) {
         Game game = new Game();
-        model.addAttribute("title" , "Create a new game");
         model.addAttribute("game",game);
+        model.addAttribute("title" , "Create a new game");
         return "games/new";
     }
 
@@ -51,22 +50,25 @@ import java.util.List;
         Game game = gameService.findById(id);
         model.addAttribute("game",game);
         model.addAttribute("title","Edit game");
-        return "games/edit/{id}";
+        return "games/edit";
 
     }
     @PostMapping("/games/edit/{id}")
-        public String addGame(Model model, @PathVariable Long id){
-        this.id = id;
+    public String addGame(Model model, @PathVariable Long id) {
         gameService.save(id);
         return "redirect:/home";
     }
-    /*/
     @GetMapping("/games/delete/{id}")
-        public String deleteGame(Model model,@PathVariable Long id) {
+    public String deleteGame(@PathVariable Long id) {
+        gameService.delete(id);
+        return "redirect/home";
+    }
+   /* @PostMapping("/games/delete/{id}")
+    public String deleteGame(Model model,@PathVariable Long id) {
         gameService.delete(id);
         return "redirect:/games";
-    }
-    /*/
+
+    }*/
 
 
 }
