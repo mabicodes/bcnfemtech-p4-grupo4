@@ -61,7 +61,7 @@ import java.util.List;
     @GetMapping("/games/delete/{id}")
     public String deleteGame(@PathVariable Long id) {
         gameService.delete(id);
-        return "redirect/home";
+        return "games/delete";
     }
    /* @PostMapping("/games/delete/{id}")
     public String deleteGame(Model model,@PathVariable Long id) {
