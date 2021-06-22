@@ -4,10 +4,8 @@
 <body>
 <header th:replace="fragments/header"></header>
 <section class="container">
-  <h1 th:text="${title}"></h1>
-  <form ...>
   <h1>Add a new game</h1>
-  <form th:action="@{/games/new}" th:object="${game}" method="post">
+  <form th:action="@{/games/new}" th:object="${game}" method="post" enctype="multipart/form-data">
     <div class="form-group">
       <input type="hidden" th:field="*{id}">
       <label class="col-md2" for="title">Title</label>

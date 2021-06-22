@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Table(name = "games")
 public class Game implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
 

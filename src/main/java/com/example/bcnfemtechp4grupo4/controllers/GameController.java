@@ -39,7 +39,7 @@ import java.util.List;
         Game game = new Game();
         model.addAttribute("game",game);
         model.addAttribute("title" , "Create a new game");
-        return "edit";
+        return "games/edit";
     }
 
     @PostMapping("/games/new")
@@ -49,7 +49,7 @@ import java.util.List;
         gameService.save(game);
         String uploadDir = "game-photo/" + game.getId();
         FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
-        return "redirect:/home";
+        return "redirect:/games";
     }
 
     @GetMapping("/games/edit/{id}")
@@ -57,18 +57,18 @@ import java.util.List;
         Game game = gameService.findById(id);
         model.addAttribute("game",game);
         model.addAttribute("title","Edit game");
-        return "edit2";
+        return "games/edit";
 
     }
     @PostMapping("/games/edit/{id}")
     public String addGame(Model model, @PathVariable Long id) {
         gameService.save(id);
-        return "redirect:/home";
+        return "redirect:/games";
     }
     @GetMapping("/games/delete/{id}")
     public String deleteGame(@PathVariable Long id) {
         gameService.delete(id);
-        return "games/delete";
+        return "redirect/games";
     }
    /* @PostMapping("/games/delete/{id}")
     public String deleteGame(Model model,@PathVariable Long id) {
