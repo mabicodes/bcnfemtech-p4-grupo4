@@ -4,8 +4,9 @@
 <body>
 <header th:replace="fragments/header"></header>
 <section class="container">
-  <h1>Add a new game</h1>
-  <form th:action="@{/games/new}" th:object="${game}" method="post">
+  <h1 th:text="${title}"></h1>
+ <!-- <form th:action="@{/games/new}" th:object="${game}" method="post" enctype="multipart/form-data">-->
+  <form th:action="@{/games/edit/+${game.id}}" th:object="${game}" method="post" enctype="multipart/form-data">
     <div class="form-group">
       <input type="hidden" th:field="*{id}">
       <label class="col-md2" for="title">Title</label>
@@ -22,6 +23,11 @@
       <input th:field="*{year}" type="text" class="col-md6 form-control form-control-sm" id="year"
              placeholder="Enter year...">
     </div>
+    <div>
+      <label for="photo"> Photo </label>
+      <input type="file" name="image" accept="image/png, image/jpeg", id="photo">
+    </div>
+
     <div class="card-footer ">
       <input type="submit" class="btn btn-primary btn-sm" value="Save"/>
     </div>

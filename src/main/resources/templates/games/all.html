@@ -9,8 +9,9 @@
 
                         <div class="card-body">
                             <div class="card" th:each="game: ${games}" style="width: 18rem;">
-                                <img th:src="@{/img/Mario.jpg}" class="card-img-top" alt="...">
+                                <img th:src="@{${game.photoImagePath}}" />
                                 <div class="card-title" th:text="${game.title}"></div>
+                                <div class="card-text" th:text="${game.price}"> </div>
                                 <div class="card-text" th:text="${game.category}"> </div>
                                 <div class="card-text" th:text="${game.year}"> </div>
                                 <div class="btn-group button">
