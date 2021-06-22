@@ -39,7 +39,7 @@ import java.util.List;
         Game game = new Game();
         model.addAttribute("game",game);
         model.addAttribute("title" , "Create a new game");
-        return "edit";
+        return "games/edit";
     }
 
     @PostMapping("/games/new")
@@ -57,7 +57,7 @@ import java.util.List;
         Game game = gameService.findById(id);
         model.addAttribute("game",game);
         model.addAttribute("title","Edit game");
-        return "edit2";
+        return "games/edit";
 
     }
     @PostMapping("/games/edit/{id}")
