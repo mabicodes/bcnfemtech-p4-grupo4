@@ -7,17 +7,18 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: #FA4325;
-    height: 80px;
+    height: 110px;
 }
 .logo {
     margin: 15px;
     margin-left: 60px;
     cursor: pointer;
+
 }
 #logoimg {
-    height: 58px;
-    width: 50px;
-    margin-bottom: 5px ;
+    height: 88px;
+    width: 70px;
+    padding-bottom: 20px;
 }
 #logotext {
     height: 50px;
