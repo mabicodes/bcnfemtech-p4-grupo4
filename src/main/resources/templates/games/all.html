@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head th:replace="fragments/head">
 
+
     </head>
         <body>
             <header th:replace="fragments/header"></header>
@@ -9,7 +10,7 @@
 
                         <div class="card-body">
                             <div class="card" th:each="game: ${games}" style="width: 18rem;">
-                                <img th:src="@{${game.photoImagePath}}" height="150" />
+                                <img th:src="@{${game.photoImagePath}}" height="250" />
                                 <div class="card-title" th:text="${game.title}"></div>
                                 <div class="card-text" th:text="${game.price}"> </div>
                                 <div class="card-text" th:text="${game.category}"> </div>
