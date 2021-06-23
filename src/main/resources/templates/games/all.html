@@ -9,7 +9,7 @@
 
                         <div class="card-body">
                             <div class="card" th:each="game: ${games}" style="width: 18rem;">
-                                <img th:src="@{${game.photoImagePath}}" />
+                                <img th:src="@{${game.photoImagePath}}" height="150" />
                                 <div class="card-title" th:text="${game.title}"></div>
                                 <div class="card-text" th:text="${game.price}"> </div>
                                 <div class="card-text" th:text="${game.category}"> </div>
