@@ -89,7 +89,7 @@ margin-bottom: 100px;
     column-count: 2;
     background-color: whitesmoke;*/
 }
-/*.container-btn {
+.container-btn {
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -97,16 +97,16 @@ margin-bottom: 100px;
     margin-bottom: 25px;
 
 
-}*/
+}
 .btn-group button {
-    background-color: rgba(227, 59, 17, 0.82);
+    background-color: #FA4325;
     border-radius: 20px;
     border: 1px solid #e33b11;
     color: white;
-    padding: 10px 84px;
+    padding: 8px 46px;
     cursor: pointer;
-    margin-left:75px;
-    margin-top:30px;
+    margin-left:15px;
+    margin-top:20px;
 }
 
 .btn-group button:not(:last-child) {
