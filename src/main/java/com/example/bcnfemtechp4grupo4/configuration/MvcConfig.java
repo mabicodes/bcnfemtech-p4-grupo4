@@ -1,4 +1,4 @@
-package com.example.bcnfemtechp4grupo4.controllers;
+package com.example.bcnfemtechp4grupo4.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -20,6 +20,6 @@ public class MvcConfig implements WebMvcConfigurer {
         String uploadPath = uploadDir.toFile().getAbsolutePath();
 
         if (dirName.startsWith("../")) dirName = dirName.replace("../", "");
-        registry.addResourceHandler("/" + dirName + "/**").addResourceLocations("file:/" + uploadPath + "/");
+        registry.addResourceHandler("/" + dirName + "/**").addResourceLocations("file://" + uploadPath + "/");
     }
 }

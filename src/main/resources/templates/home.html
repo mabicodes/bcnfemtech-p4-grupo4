@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head th:replace="fragments/head"></head>
 <body>
@@ -7,7 +7,8 @@
         <section class="home-container">
             <h2>Welcome to our LegacyGames Store</h2>
             <br>
-            <p>Go to the <a href="/games/">Games</a> section or <a href="/games/new">add a game! </a></p>
+            <p sec:authorize="isAnonymous()">Go to the <a href="/games/">Games</a> section or <a href="/login">Login</a></p>
+            <p sec:authorize="isAuthenticated()">Go to the <a href="/games/">Games</a> section or <a href="/games/new">add a game!</a></p>
         </section>
         <footer th:replace="fragments/footer"></footer>
     </body>
