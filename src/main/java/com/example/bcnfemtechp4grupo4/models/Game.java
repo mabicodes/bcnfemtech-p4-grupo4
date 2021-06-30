@@ -11,21 +11,16 @@ import java.io.Serializable;
 public class Game implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
-
-
     @NotNull
     private String title;
-
     @NotNull
     private Long year;
-
     @NotNull
     private double price;
-
     @NotNull
     private String category;
-
     private String photo;
 
 
