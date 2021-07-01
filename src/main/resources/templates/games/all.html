@@ -8,7 +8,13 @@
             <header th:replace="fragments/header"></header>
             <main th:replace="fragments/main"></main>
                 <section class="container">
-
+                    <ul class="game-filters">
+                        <li><a href="#">Title</a></li>
+                        <li><a href="#">Price</a></li>
+                        <li><a href="#">Year</a></li>
+                        <li><a href="#">Categoty</a></li>
+                        <li><a href="#">Photo</a></li>
+                    </ul>
                         <div class="card-body">
                             <div class="card" th:each="game: ${games}" style="width: 18rem;">
                                 <img th:src="@{${game.photoImagePath}}" height="250" />

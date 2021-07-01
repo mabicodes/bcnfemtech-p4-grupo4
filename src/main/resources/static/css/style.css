@@ -151,4 +151,9 @@ margin-bottom: 100px;
     list-style-type: none;
     padding-left: 0;
 }
-
+.game-filters {
+    display: flex;
+}
+.game-filters li {
+    margin: 0 15px;
+}

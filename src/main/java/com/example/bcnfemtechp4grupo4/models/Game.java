@@ -20,7 +20,9 @@ public class Game implements Serializable {
     @NotNull
     private double price;
     @NotNull
-    private String category;
+    @ManyToOne
+    @JoinColumn (name = "category_id")
+    private Category category;
     private String photo;
 
 
@@ -57,9 +59,9 @@ public class Game implements Serializable {
 
     public void setYear(Long year) { this.year = year; }
 
-    public String getCategory() { return category;}
+    public Category getCategory() { return category;}
 
-    public void setCategory(String category) { this.category=category;}
+    public void setCategory(Category category) { this.category = category; }
 
 
     public String getPhoto() {
