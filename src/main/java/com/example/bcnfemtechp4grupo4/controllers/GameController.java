@@ -22,8 +22,9 @@ public class GameController {
     private PlatformService platformService;
 
     @Autowired
-    public GameController(GameService gameService) {
+    public GameController(GameService gameService, PlatformService platformService) {
         this.gameService = gameService;
+        this.platformService = platformService;
     }
 
 
