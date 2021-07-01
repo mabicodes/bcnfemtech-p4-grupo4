@@ -121,9 +121,9 @@ margin-bottom: 100px;
     clear: both;
     display: table;
 }
-.game-filters li:hover {
+/*.game-filters li:hover {
     background-color: #e33b11;
-}
+}*/
 /* card */
 .card-body{
     display:flex;
@@ -145,3 +145,4 @@ margin-bottom: 100px;
     list-style-type: none;
     padding-left: 0;
 }
+.game-filters

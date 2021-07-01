@@ -20,7 +20,7 @@
                             <div class="card" th:each="game: ${games}" style="width: 18rem;">
                                 <img th:src="@{${game.photoImagePath}}" height="250" />
                                 <div class="card-title" th:text="${game.title}"></div>
-                                <div class="card-text" th:text="${game.platform}"> </div>
+                                <div class="card-text" th:text="${game.platform.name}"> </div>
                                 <div class="card-text" th:text="${game.price}"> </div>
                                 <div class="card-text" th:text="${game.category}"> </div>
                                 <div class="card-text" th:text="${game.year}"> </div>
