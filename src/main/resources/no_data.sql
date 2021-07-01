@@ -15,7 +15,7 @@ VALUES  ( 1, 'Wii'),
         ( 14, 'XB');
 
 
-INSERT INTO games(title, platform, price, year, category, photo)
+INSERT INTO games(title, platform_id, price, year, category, photo)
 VALUES  ('Wii Sports',1,'19.99', '2006', 'Sports', 'default'),
         ('Super Mario Bros',2,'14.99', '1985', 'Platform', 'default'),
         ('Mario Kart Wii',1,'9.99', '2008', 'Racing', 'default'),
