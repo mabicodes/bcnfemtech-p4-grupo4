@@ -12,35 +12,22 @@ public class Game implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-
     @NotNull
     private String title;
-
+    @NotNull
+    private String platform;
     @NotNull
     private Long year;
-
     @NotNull
     private double price;
-
     @NotNull
     private String category;
-
+    @NotNull
     private String photo;
 
 
 
-    @Override
-    public String toString() {
-        return "Game{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", year='" + year + '\'' +
-                ", price='" + price + '\'' +
-                ", category='" + category + '\'' +
-                ", photo='" + photo + '\'' +
-                '}';
-    }
+
 
     public Long getId() {
         return id;
@@ -58,13 +45,27 @@ public class Game implements Serializable {
         this.title = title;
     }
 
+    @Override
+    public String toString() {
+        return "Game{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", platform='" + platform + '\'' +
+                ", year='" + year + '\'' +
+                ", price='" + price + '\'' +
+                ", category='" + category + '\'' +
+                ", photo='" + photo + '\'' +
+                '}';
+    }
+
+
     public Long getYear() { return year;}
 
     public void setYear(Long year) { this.year = year; }
 
     public String getCategory() { return category;}
 
-    public void setCategory(String category) { this.category=category;}
+    public void setCategory(String category) { this.category = category; }
 
 
     public String getPhoto() {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
     <head th:replace="fragments/head">
 
 
@@ -8,15 +8,23 @@
             <header th:replace="fragments/header"></header>
             <main th:replace="fragments/main"></main>
                 <section class="container">
-
+                    <ul class="game-filters">
+                        <li><a href="#">Title</a></li>
+                        <li><a href="#">Platform</a></li>
+                        <li><a href="#">Price</a></li>
+                        <li><a href="#">Year</a></li>
+                        <li><a href="#">Categoty</a></li>
+                        <li><a href="#">Photo</a></li>
+                    </ul>
                         <div class="card-body">
                             <div class="card" th:each="game: ${games}" style="width: 18rem;">
                                 <img th:src="@{${game.photoImagePath}}" height="250" />
                                 <div class="card-title" th:text="${game.title}"></div>
+                                <div class="card-text" th:text="${game.platform}"> </div>
                                 <div class="card-text" th:text="${game.price}"> </div>
                                 <div class="card-text" th:text="${game.category}"> </div>
                                 <div class="card-text" th:text="${game.year}"> </div>
-                                <div class="btn-group button">
+                                <div class="btn-group button" sec:authorize="isAuthenticated()">
                                 <td>
                                     <a class="btn btn-success btn-sm" th:href="'/games/edit/'+${game.id}">Edit</a>
                                 </td>
