@@ -1,5 +1,5 @@
 html{
-    background-color: black;
+    background-color: white;
 }
 body{
     margin: 0;
@@ -53,15 +53,15 @@ body{
 }
 /*-----HOME HTML ---- */
 .home-container {
-    background-color: black;
+    background-color: white;
 }
 .home-container p,h2{
-    color: white;
+    color: black;
     text-align: center;
 }
 /*-----MAIN-CONTAINER----*/
 main {
-    background-color: black;
+    background-color: white;
 }
 /*SLIDER*/
 .d-blockw-100,.carousel-item {
