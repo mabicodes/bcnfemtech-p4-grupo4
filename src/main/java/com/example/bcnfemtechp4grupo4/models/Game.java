@@ -14,8 +14,9 @@ public class Game implements Serializable {
     private Long id;
     @NotNull
     private String title;
-    @NotNull
-    private String platform;
+    @ManyToOne
+    @JoinColumn(name = "platform_id")
+    private Platform platform;
     @NotNull
     private Long year;
     @NotNull
@@ -57,6 +58,10 @@ public class Game implements Serializable {
                 ", photo='" + photo + '\'' +
                 '}';
     }
+
+    public Platform getPlatform() { return platform;}
+
+    public void setPlatform(Platform platform) { this.platform = platform; }
 
 
     public Long getYear() { return year;}
