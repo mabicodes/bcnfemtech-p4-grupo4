@@ -2,6 +2,7 @@ package com.example.bcnfemtechp4grupo4.controllers;
 
 import com.example.bcnfemtechp4grupo4.models.Game;
 import com.example.bcnfemtechp4grupo4.services.GameService;
+import com.example.bcnfemtechp4grupo4.services.PlatformService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,35 +16,37 @@ import java.io.IOException;
 import java.util.List;
 
 
-
 @Controller
-   public class GameController {
+public class GameController {
     private final GameService gameService;
+    private PlatformService platformService;
 
     @Autowired
-    public GameController(GameService gameService) { this.gameService=gameService;}
-
-
+    public GameController(GameService gameService) {
+        this.gameService = gameService;
+    }
 
 
     @GetMapping("/games")
     String listGames(Model model) {
         List<Game> games = gameService.allGames();
-        model.addAttribute("title" , "Games List");
-        model.addAttribute("games",games);
+        model.addAttribute("title", "Games List");
+        model.addAttribute("games", games);
         return "games/all";
     }
 
     @GetMapping("/games/new")
-       public String newGame(Model model) {
+    public String newGame(Model model) {
         Game game = new Game();
-        model.addAttribute("game",game);
-        model.addAttribute("title" , "Create a new game");
+        model.addAttribute("game", game);
+        model.addAttribute("title", "Create a new game");
+        model.addAttribute("platforms", platformService.allPlatforms());
+
         return "games/edit";
     }
 
     @PostMapping("/games/new")
-        public String addGame(@ModelAttribute Game game, @RequestParam("image") MultipartFile multipartFile) throws IOException {
+    public String addGame(@ModelAttribute Game game, @RequestParam("image") MultipartFile multipartFile) throws IOException {
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         game.setPhoto(fileName);
         gameService.save(game);
@@ -53,18 +56,20 @@ import java.util.List;
     }
 
     @GetMapping("/games/edit/{id}")
-        public String editGame(Model model, @PathVariable Long id) {
+    public String editGame(Model model, @PathVariable Long id) {
         Game game = gameService.findById(id);
-        model.addAttribute("game",game);
-        model.addAttribute("title","Edit game");
+        model.addAttribute("game", game);
+        model.addAttribute("title", "Edit game");
         return "games/edit";
 
     }
+
     @PostMapping("/games/edit/{id}")
     public String addGame(Model model, @PathVariable Long id) {
         gameService.save(id);
         return "redirect:/games";
     }
+
     @GetMapping("/games/delete/{id}")
     public String deleteGame(@PathVariable Long id) {
         gameService.delete(id);

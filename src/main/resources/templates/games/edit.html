@@ -16,8 +16,8 @@
       <label class="col-md2" for="platform">Platform</label>
       <select th:field="*{platform}" type="text" class="col-md6 form-control form-control-sm" id="platform"
               placeholder="Enter platform">
-        <option th:each="1">Patata</option>
-        <option th:each="2">Patata</option>
+        <option th:each="platform:${platforms}"th:value="${platform.id}" th:text="${platform.name}"></option>
+
       </select>
     </div>
     <div class="form-group">
