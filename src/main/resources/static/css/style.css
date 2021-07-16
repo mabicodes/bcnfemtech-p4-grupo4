@@ -8,6 +8,7 @@ body {
     justify-content: space-between;
     background-color: #FA4325;
     height: 110px;
+    max-width: 100%;
 }
 .logo {
     margin: 15px;
@@ -30,7 +31,7 @@ body {
     display: flex;
     margin: 30px;
     margin-right: 90px;
-
+    position: absolute;
 }
 .searchbar input{
     height: 25px;
@@ -48,21 +49,6 @@ body {
 }
 .searchbar img:hover{
     transform: scale(1.6);
-}
-
-/*MAIN-CONTAINER*/
-main {
-    background-color: black;
-}
-/*SLIDER*/
-.d-blockw-100,.carousel-item {
-    height: 350px;
-    width: 70%;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0px;
-    right: 0px;
 }
 
 /*GRID*/
@@ -88,31 +74,32 @@ margin-bottom: 100px;
     column-count: 2;
     background-color: whitesmoke;*/
 }
+.btn-group button {
+    background-color: #FA4325;
+    border-radius: 15px;
+    border: 1px solid #e33b11;
+    color: white;
+    padding: 1% 4.5%;
+    cursor: pointer;
+    margin-left:15px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 .container-btn {
     margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 25px;
-
-
 }
-.btn-group button {
-    background-color: #FA4325;
-    border-radius: 15px;
-    border: 1px solid #e33b11;
-    color: white;
-    padding: 7px 32px;
-    cursor: pointer;
-    margin-left:15px;
-    margin-top:20px;
-    margin-bottom: 20px;
-}
-
 .btn-group button:not(:last-child) {
     border-right: none;
+    width: 100%;
 }
-
 .btn-group:after {
     content: "";
     clear: both;
@@ -127,7 +114,35 @@ margin-bottom: 100px;
     flex-wrap: wrap;
     padding:20px;
 }
+.slide-img-1{
+    border: 2px solid black;
+    padding: 25px;
+    background: url(https://images8.alphacoders.com/518/thumb-1920-518841.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+.slide-img-2{
+    border: 2px solid black;
+    padding: 25px;
+    background: url(https://images8.alphacoders.com/518/thumb-1920-518841.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
+    height: 300px;
+}
+
+.slide-img-3{
+    border: 2px solid black;
+    padding: 25px;
+    background: url(https://images8.alphacoders.com/518/thumb-1920-518841.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
 .card{
     border: 1px solid black;
     width: 250px;
@@ -137,6 +152,3 @@ margin-bottom: 100px;
     align-items: center;
 
 }
-
-
-
